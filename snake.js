@@ -7,6 +7,7 @@ var food;
 let go = document.getElementById("snake")
 console.log(go)
 
+let speed = 10
 
 flag = true
 
@@ -14,7 +15,7 @@ if (flag) {
     function setup() {
 
         createCanvas(screen.availWidth - 30, screen.availHeight - 300)
-        frameRate(10)
+        frameRate(speed)
         s = new Snake()
         getloc()
         let score = document.getElementById("score")
@@ -79,6 +80,7 @@ if (flag) {
                     this.total = 0
                     this.realtail = []
                     alert('You died')
+                    location.reload(); 
                 }
             }
 
